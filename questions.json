@@ -1,0 +1,233 @@
+{
+  "beginner": [
+    {
+      "expr": "5 + '5'",
+      "result": "55",
+      "explanation": "The number 5 is coerced into a string, resulting in string concatenation."
+    },
+    {
+      "expr": "true + 1",
+      "result": "2",
+      "explanation": "true is coerced to 1, so 1 + 1 = 2."
+    },
+    {
+      "expr": "'10' - 2",
+      "result": "8",
+      "explanation": "'10' is coerced to a number, so 10 - 2 = 8."
+    },
+    {
+      "expr": "false + 5",
+      "result": "5",
+      "explanation": "false is coerced to 0, so 0 + 5 = 5."
+    },
+    {
+      "expr": "null + 3",
+      "result": "3",
+      "explanation": "null is coerced to 0, so 0 + 3 = 3."
+    },
+    {
+      "expr": "undefined + 4",
+      "result": "NaN",
+      "explanation": "undefined cannot be converted to a number, resulting in NaN."
+    },
+    {
+      "expr": "'5' * 2",
+      "result": "10",
+      "explanation": "The string '5' is coerced into a number, so 5 * 2 = 10."
+    },
+    {
+      "expr": "10 / '2'",
+      "result": "5",
+      "explanation": "The string '2' is coerced into a number, so 10 / 2 = 5."
+    },
+    {
+      "expr": "'6' - '2'",
+      "result": "4",
+      "explanation": "Both strings are coerced into numbers before subtraction."
+    },
+    {
+      "expr": "'3' * '3'",
+      "result": "9",
+      "explanation": "Both strings are coerced into numbers before multiplication."
+    },
+    {
+      "expr": "'4' / '2'",
+      "result": "2",
+      "explanation": "Both strings are coerced into numbers before division."
+    },
+    {
+      "expr": "'7' + 3",
+      "result": "73",
+      "explanation": "The number is converted to a string, so '7' + '3' = '73'."
+    },
+    {
+      "expr": "'8' - true",
+      "result": "7",
+      "explanation": "'8' is converted to a number and true to 1, so 8 - 1 = 7."
+    },
+    {
+      "expr": "false + '1'",
+      "result": "01",
+      "explanation": "false is coerced to 0, then concatenated with '1'."
+    },
+    {
+      "expr": "null + '5'",
+      "result": "null5",
+      "explanation": "null remains a string and is concatenated with '5'."
+    }
+  ],
+  "intermediate": [
+    {
+      "expr": "!!'false'",
+      "result": "true",
+      "explanation": "Any non-empty string is truthy, so !!'false' is true."
+    },
+    {
+      "expr": "!0",
+      "result": "true",
+      "explanation": "0 is falsy, so negating it gives true."
+    },
+    {
+      "expr": "1 + true",
+      "result": "2",
+      "explanation": "true is coerced to 1, so 1 + 1 = 2."
+    },
+    {
+      "expr": "'5' - true",
+      "result": "4",
+      "explanation": "'5' is converted to a number and true to 1, so 5 - 1 = 4."
+    },
+    {
+      "expr": "[] + []",
+      "result": "",
+      "explanation": "Both arrays are coerced into empty strings, resulting in an empty string."
+    },
+    {
+      "expr": "{} + []",
+      "result": "[object Object]",
+      "explanation": "{} is coerced into '[object Object]', then concatenated."
+    },
+    {
+      "expr": "[] + {}",
+      "result": "[object Object]",
+      "explanation": "An empty array becomes an empty string, then concatenated with {}."
+    },
+    {
+      "expr": "'3' + 2 - 1",
+      "result": "31",
+      "explanation": "'3' + 2 gives '32', then '32' - 1 = 31 (number)."
+    },
+    {
+      "expr": "2 + 3 + '5'",
+      "result": "55",
+      "explanation": "Addition happens first (2 + 3 = 5), then string concatenation (5 + '5' = '55')."
+    },
+    {
+      "expr": "'10' - -'5'",
+      "result": "15",
+      "explanation": "Both are coerced to numbers, so 10 - (-5) = 15."
+    },
+    {
+      "expr": "'10px' - 2",
+      "result": "NaN",
+      "explanation": "'10px' cannot be converted to a number."
+    },
+    {
+      "expr": "null == undefined",
+      "result": "true",
+      "explanation": "null and undefined are loosely equal but not strictly."
+    },
+    {
+      "expr": "'true' == true",
+      "result": "false",
+      "explanation": "'true' is a string, and true is a boolean."
+    },
+    {
+      "expr": "'false' == false",
+      "result": "false",
+      "explanation": "'false' is a string, while false is a boolean."
+    },
+    {
+      "expr": "' ' == 0",
+      "result": "true",
+      "explanation": "A space string is coerced into 0."
+    }
+  ],
+  "advanced": [
+    {
+      "expr": "'5' | 0",
+      "result": "5",
+      "explanation": "Bitwise OR coerces '5' into a number."
+    },
+    {
+      "expr": "'5' & 1",
+      "result": "1",
+      "explanation": "'5' is coerced into a number before bitwise AND."
+    },
+    {
+      "expr": "!![]",
+      "result": "true",
+      "explanation": "An empty array is truthy."
+    },
+    {
+      "expr": "!!{}",
+      "result": "true",
+      "explanation": "An empty object is truthy."
+    },
+    {
+      "expr": "!{}",
+      "result": "false",
+      "explanation": "An empty object is truthy, so negating it gives false."
+    },
+    {
+      "expr": "+'5'",
+      "result": "5",
+      "explanation": "Unary plus converts the string '5' to a number."
+    },
+    {
+      "expr": "+'10px'",
+      "result": "NaN",
+      "explanation": "'10px' cannot be converted to a number."
+    },
+    {
+      "expr": "~~5.9",
+      "result": "5",
+      "explanation": "Double bitwise NOT rounds down a number."
+    },
+    {
+      "expr": "[1,2,3] + [4,5,6]",
+      "result": "1,2,34,5,6",
+      "explanation": "Arrays are coerced into strings and concatenated."
+    },
+    {
+      "expr": "parseInt('08')",
+      "result": "8",
+      "explanation": "parseInt converts '08' to 8."
+    },
+    {
+      "expr": "parseInt('08', 8)",
+      "result": "0",
+      "explanation": "Parsing as octal, '08' is invalid and returns 0."
+    },
+    {
+      "expr": "typeof NaN",
+      "result": "number",
+      "explanation": "NaN is technically a number."
+    },
+    {
+      "expr": "typeof null",
+      "result": "object",
+      "explanation": "null is a primitive, but typeof returns 'object' due to legacy reasons."
+    },
+    {
+      "expr": "'2' - -'2'",
+      "result": "4",
+      "explanation": "Both '2' values are converted to numbers."
+    },
+    {
+      "expr": "1 + - + + + -1",
+      "result": "0",
+      "explanation": "Operators cancel each other out, resulting in 1 - 1 = 0."
+    }
+  ]
+}

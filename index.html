@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Coercion Challenge in JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Type Coercion Challenge in JS</h1>
+      <div id="level-selection">
+        <h2>Select Difficulty</h2>
+        <button onclick="startGame('beginner')">Beginner</button>
+        <button onclick="startGame('intermediate')">Intermediate</button>
+        <button onclick="startGame('advanced')">Advanced</button>
+      </div>
+
+      <div id="game-container" style="display: none">
+        <h2 id="difficulty"></h2>
+        <p id="question-counter"></p>
+        <p>Guess the output of this JavaScript expression:</p>
+        <div class="expression" id="expression"></div>
+        <input type="text" id="userInput" placeholder="Enter your answer" />
+        <button onclick="checkAnswer()">Submit</button>
+        <p class="result" id="result"></p>
+        <p id="explanation"></p>
+        <p>Score: <span id="score">0</span></p>
+        <button onclick="nextQuestion()">Next</button>
+      </div>
+
+      <div id="game-over" style="display: none">
+        <h2>Game Over</h2>
+        <p>Your final score: <span id="final-score"></span></p>
+        <button onclick="restartGame()">Play Again</button>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Read:
+        <a
+          href="https://medium.com/@edekobifrank/understanding-type-coercion-in-javascript-a-complete-guide-b8f37e38cd39"
+          target="_blank"
+        >
+          Understanding Type Coercion in JavaScript
+        </a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
