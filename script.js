@@ -80,3 +80,14 @@ function restartGame() {
   document.getElementById("game-over").style.display = "none"
   document.getElementById("level-selection").style.display = "block"
 }
+
+
+function convertOctalToDecimal(octal){
+    const octalString = String(octal)
+    let decimal = 0
+    for(let i=0; i<octalString.length;i++){
+      const power = octalString.length - 1 - i;
+      decimal += Number(octalString[i]) * Math.pow(8, power)
+    }
+    return decimal;
+}

@@ -5,28 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Type Coercion Challenge in JS</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>Type Coercion Challenge in JS</h1>
+      <h1 class="white-gradient">Type Coercion Challenge in JS</h1>
       <div id="level-selection">
         <h2>Select Difficulty</h2>
-        <button onclick="startGame('beginner')">Beginner</button>
-        <button onclick="startGame('intermediate')">Intermediate</button>
-        <button onclick="startGame('advanced')">Advanced</button>
+        <div class="btn-group">
+          <button onclick="startGame('beginner')">Beginner</button>
+          <button onclick="startGame('intermediate')">Intermediate</button>
+          <button onclick="startGame('advanced')">Advanced</button>
+        </div>
       </div>
 
       <div id="game-container" style="display: none">
-        <h2 id="difficulty"></h2>
-        <p id="question-counter"></p>
-        <p>Guess the output of this JavaScript expression:</p>
+        <div class="header-game-container">
+          <h2 id="question-counter" class="text-content"></h2>
+          <h2 id="difficulty" class="text-content"></h2>
+        </div>
+        <p id="guess">Guess the output of this JavaScript expression</p>
         <div class="expression" id="expression"></div>
-        <input type="text" id="userInput" placeholder="Enter your answer" />
-        <button onclick="checkAnswer()">Submit</button>
+        <div id="form-input">
+          <input type="text" id="userInput" placeholder="Enter your answer" />
+          <button onclick="checkAnswer()" id="submit">Submit</button>
+        </div>
         <p class="result" id="result"></p>
         <p id="explanation"></p>
-        <p>Score: <span id="score">0</span></p>
-        <button onclick="nextQuestion()">Next</button>
+        <div class="footer-game-container">
+          <h2 id="score-txt" class="text-content">
+            Score: <span id="score">0</span>
+          </h2>
+          <button onclick="nextQuestion()" id="next">Next</button>
+        </div>
       </div>
 
       <div id="game-over" style="display: none">
