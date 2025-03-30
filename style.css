@@ -194,6 +194,10 @@ input {
   display: none;
 }
 
+#game-over p {
+  margin-bottom: 2rem;
+}
+
 #score {
   font-weight: bold;
   font-size: 18px;
