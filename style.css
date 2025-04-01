@@ -13,7 +13,7 @@
 
 html,
 body {
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -290,17 +290,20 @@ footer {
   text-align: center;
   padding: 15px 25px;
   font-size: 14px;
-  width: max-content;
+  width: 100%;
+  max-width: max-content;
   position: relative;
   bottom: 0;
   margin: auto;
   margin-bottom: 2rem;
   font-size: 0.75rem;
+  word-wrap: break-word;
 }
 
 footer a {
   color: #4db8ff;
   text-decoration: none;
+  word-wrap: break-word;
 }
 
 /* footer a:hover {
