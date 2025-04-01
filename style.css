@@ -259,6 +259,9 @@ input {
   h2 {
     font-size: 2rem; /* Equivalent to text-5xl */
   }
+  input {
+    width: 100%;
+  }
 }
 
 .footer-game-container #next,
